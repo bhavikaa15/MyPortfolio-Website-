@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial=scale=1.0">
+    <title>Bhvaika Sangtani-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/84d779fcbb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header"> 
+    <div class="container">
+        <nav>
+            <img src="images/logos.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <div class="cursor"></div>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Developer</p>
+            <h1>Hi,I am <span> Bhavika</span> <br> Sangtani From India</h1>
+            
+        </div>
+       
+    </div>
+</div>
+<!-- ------------about----------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/users.png" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"> About Me</h1>
+                <p>I am a passionate Developer and fast learner with strong coommuncation skills. I'm very focused and creative who is thriving hard about new tech.I enjoy learning new skills through challenging projects.</p>
+                <div class="tab-titles ">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming</span><br>C++,Python,DSA</li>
+                        <li><span>Web Development</span><br>Web App Development <br>HTML,CSS,JavaScript</li>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Web Development Bootcamp</span><br>A Bootcamp by DevTown where we build a clone and got  Certificate from Google.</li>
+                        <li><span>Udemy Data Science with Python</span><br>Web App Development <br>HTML,CSS,JavaScript</li>
+                        <li><span>Udemy C++ Programming</span><br>An online course authorised by Udemy</li>
+                        <li><span>NPTEL Qualified</span><br>NPTEL-Cloud Computing course completed on 8 August 2021</li>
+                        <li><span>Coursera Certification</span><br>Certification for succesfully building a game</li>
+                        <li><span>Udemy Data Structure</span><br>An online course authorised by Udemy of Data Structure and Algorithm</li>
+                        <li><span>Freelancing</span><br>Build a blogging and Portfolio website for a client</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>10th CBSE</span><br>Scored 88.6% <br>School-Christu Jyoti Convent Sr. Sec. School</li>
+                        <li><span>12th CBSE</span><br>Scored 88.8%<br>School-IBS Global Academy</li>
+                        <li><span>B.Tech-BVUCOEP</span><br>1st year-10CGPA <br>2nd year-8.9CGPA <br>Currently in 3rd year</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -----------services----------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>Made websites with favourable UI/UX design and is willing to offer the same.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>I am well equiped for skills required to build a responsive and user-friendly website.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="cursor"></div>
+        </div>
+    </div> 
+</div>
+
+<!---------------------contact-------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-envelope"></i> bhavikasangtani15@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> +91 9691765028</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/bhavika15_?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/bhavika-sangtani-b0067920b"><i class="fa-brands fa-linkedin"></i></a>
+
+            </div>
+            <a href="resume.docx" class="btn btn2" >Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright Ⓒ Bhavika. Designed by Me.</p>
+    </div>
+</div>
+
+
+<script>
+var tablinks = document.getElementsByClassName("tab-links"); 
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){ 
+        tablink.classList.remove("active-link");
+    } 
+    for (tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+<script>
+var sidemenu = document.getElementById("sidemenu");
+function openmenu(){
+    sidemenu.style.right="0";
+}
+function closemenu(){
+    sidemenu.style.right="-200px";
+}
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyr17bX8a4xC_3sWPkm0DQJ0wZ0vDgIL2tcuH7M1qSk3zpwWAIXOYu7Vj62_zCfhFFP/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML = "Delivered Succesfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  <script>
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove',(e)=>{
+        cursor.style.left = e.pageX + 'px';
+        cursor.style.top = e.pageY + 'px'; 
+
+    })
+  </script>
+</body>
+</html>
